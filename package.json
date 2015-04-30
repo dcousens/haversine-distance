@@ -1,0 +1,26 @@
+{
+  "name": "haversine-distance",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "standard": "standard",
+    "test": "npm run-script unit",
+    "unit": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/haversine-distance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcousens/haversine-distance/issues"
+  },
+  "homepage": "https://github.com/dcousens/haversine-distance",
+  "keywords": [],
+  "author": "Daniel Cousens",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "standard": "*"
+  }
+}
