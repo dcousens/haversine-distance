@@ -1,5 +1,6 @@
 # haversine-distance
 
+[![build status](https://secure.travis-ci.org/dcousens/haversine-distance.png)](http://travis-ci.org/dcousens/haversine-distance)
 [![Version](http://img.shields.io/npm/v/haversine-distance.svg)](https://www.npmjs.org/package/haversine-distance)
 
 Haversine formula in Javascript.  In meters.  Nothing more.
