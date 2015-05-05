@@ -1,7 +1,7 @@
 {
   "name": "haversine-distance",
   "version": "1.0.0",
-  "description": "",
+  "description": "Haversine formula in Javascript. In meters. Nothing more.",
   "main": "index.js",
   "scripts": {
     "standard": "standard",
@@ -16,7 +16,16 @@
     "url": "https://github.com/dcousens/haversine-distance/issues"
   },
   "homepage": "https://github.com/dcousens/haversine-distance",
-  "keywords": [],
+  "keywords": [
+    "haversine",
+    "distance",
+    "geography",
+    "latitude",
+    "longitude",
+    "coordinates",
+    "math",
+    "meters"
+  ],
   "author": "Daniel Cousens",
   "license": "MIT",
   "devDependencies": {
