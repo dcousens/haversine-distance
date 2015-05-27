@@ -3,6 +3,8 @@
 [![build status](https://secure.travis-ci.org/dcousens/haversine-distance.png)](http://travis-ci.org/dcousens/haversine-distance)
 [![Version](http://img.shields.io/npm/v/haversine-distance.svg)](https://www.npmjs.org/package/haversine-distance)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 Haversine formula in Javascript.  In meters.  Nothing more.
 
 
