@@ -33,6 +33,5 @@ console.log(haversine(a, b))
 ```
 
 
-## License
+## License [MIT](LICENSE)
 
-This library is free and open-source software released under the MIT license.
