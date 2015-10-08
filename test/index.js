@@ -6,7 +6,7 @@ var fixtures = require('./fixtures')
 
 describe('haversine', function () {
   fixtures.forEach(function (f) {
-    it('returns ' + f.expected + ' for ' + f.arguments, function () {
+    it('returns ' + f.expected + ' for ' + JSON.stringify(f.arguments), function () {
       var actual = haversine.apply(null, f.arguments)
 
       assert.equal(actual, f.expected)
