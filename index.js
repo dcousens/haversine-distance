@@ -5,7 +5,7 @@ var sqrt = Math.sqrt
 var PI = Math.PI
 
  // (mean) radius of Earth (meters)
-const R = 6378137
+var R = 6378137
 
 function squared (x) { return x * x }
 function toRad (x) { return x * PI / 180.0 }
