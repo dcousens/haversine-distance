@@ -1,11 +1,11 @@
-const atan2 = Math.atan2
-const cos = Math.cos
-const sin = Math.sin
-const sqrt = Math.sqrt
-const PI = Math.PI
+var atan2 = Math.atan2
+var cos = Math.cos
+var sin = Math.sin
+var sqrt = Math.sqrt
+var PI = Math.PI
 
  // (mean) radius of Earth (meters)
-const R = 6378137
+var R = 6378137
 
 function squared (x) { return x * x }
 function toRad (x) { return x * PI / 180.0 }
@@ -25,4 +25,3 @@ module.exports = function haversineDistance (a, b) {
 
   return R * c
 }
-
