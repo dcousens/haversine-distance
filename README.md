@@ -20,7 +20,7 @@ var b = { latitude: 33.8650, longitude: 151.2094 }
 console.log(haversine(a, b))
 ```
 
-`lat`, `lng` variants will also work:
+`lat`, `lng` works too:
 
 ``` javascript
 var haversine = require('haversine-distance')
