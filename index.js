@@ -14,8 +14,8 @@ function toRad (x) { return x * PI / 180.0 }
 module.exports = function haversineDistance (a, b) {
   var aLat = a.latitude || a.lat
   var bLat = b.latitude || b.lat
-  var aLng = a.longitude || a.lng
-  var bLng = b.longitude || b.lng
+  var aLng = a.longitude || a.lng || a.lon
+  var bLng = b.longitude || b.lng || b.lon
 
   var dLat = toRad(bLat - aLat)
   var dLon = toRad(bLng - aLng)
