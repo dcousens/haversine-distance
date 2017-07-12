@@ -9,7 +9,7 @@ describe('haversine', function () {
     it('returns ' + f.expected + ' for ' + JSON.stringify(f.arguments), function () {
       var actual = haversine.apply(null, f.arguments)
 
-      assert.equal(actual, f.expected)
+      assert(Math.abs(actual - f.expected) < 0.0001)
     })
   })
 })
