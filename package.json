@@ -4,7 +4,7 @@
   "description": "Haversine formula in Javascript. In meters. Nothing more.",
   "main": "index.js",
   "scripts": {
-    "standard": "standard",
+    "lint": "standard",
     "test": "npm run-script unit",
     "unit": "mocha"
   },
