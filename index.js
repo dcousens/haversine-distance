@@ -1,3 +1,8 @@
+// Reference material(s)
+// - https://en.wikipedia.org/wiki/Haversine_formula
+// - https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
+// - https://stackoverflow.com/questions/1502590/calculate-distance-between-two-points-in-google-maps-v3
+
 var atan2 = Math.atan2
 var cos = Math.cos
 var sin = Math.sin
@@ -10,7 +15,6 @@ var R = 6378137
 function squared (x) { return x * x }
 function toRad (x) { return x * PI / 180.0 }
 
-// https://stackoverflow.com/questions/1502590/calculate-distance-between-two-points-in-google-maps-v3
 module.exports = function haversineDistance (a, b) {
   var aLat = a.latitude || a.lat
   var bLat = b.latitude || b.lat
