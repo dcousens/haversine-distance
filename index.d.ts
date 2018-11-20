@@ -1,18 +1,18 @@
 export type LocationUnion = LatitudeLongitude | LatLng | LatLon;
 
 interface LatitudeLongitude {
-  latitude: number;
-  longitude: number;
+    latitude: number;
+    longitude: number;
 }
 
 interface LatLng {
-  lat:number;
-  lng: number;
+    lat: number;
+    lng: number;
 }
 
 interface LatLon {
-  lat: number;
-  lon: number;
+    lat: number;
+    lon: number;
 }
 
 /**
@@ -20,4 +20,4 @@ interface LatLon {
  * @param a first location
  * @param b second location
  */
-export function haversineDistance(a: LocationUnion, b: LocationUnion): number;
+export default function haversineDistance(a: LocationUnion, b: LocationUnion): number;
