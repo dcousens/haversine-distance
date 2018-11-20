@@ -4,9 +4,9 @@
   "description": "Haversine formula in Javascript. In meters. Nothing more.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
+    "standard": "standard",
     "test": "npm run-script unit",
-    "unit": "mocha"
+    "unit": "tape test/index.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   "author": "Daniel Cousens",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "*",
-    "standard": "*"
+    "standard": "*",
+    "tape": "^4.9.1"
   }
 }

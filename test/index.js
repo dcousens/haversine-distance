@@ -1,15 +1,12 @@
-/* global describe, it */
-
-var assert = require('assert')
 var haversine = require('../')
 var fixtures = require('./fixtures')
+var tape = require('tape')
 
-describe('haversine', function () {
-  fixtures.forEach(function (f) {
-    it('returns ' + f.expected + ' for ' + JSON.stringify(f.arguments), function () {
-      var actual = haversine.apply(null, f.arguments)
+fixtures.forEach(function (f) {
+  tape('returns ' + f.expected + ' for ' + JSON.stringify(f.arguments), function (t) {
+    var actual = haversine.apply(null, f.arguments)
 
-      assert(Math.abs(actual - f.expected) < 0.0001)
-    })
+    t.plan(1)
+    t.ok(Math.abs(actual - f.expected) < 0.0001, '~equal')
   })
 })
