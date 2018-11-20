@@ -9,7 +9,7 @@ var sin = Math.sin
 var sqrt = Math.sqrt
 var PI = Math.PI
 
- // (mean) radius of Earth (meters)
+// (mean) radius of Earth (meters)
 var R = 6378137
 
 function squared (x) { return x * x }
