@@ -3,6 +3,7 @@
   "version": "1.1.4",
   "description": "Haversine formula in Javascript. In meters. Nothing more.",
   "main": "index.js",
+  "types": "types.d.ts",
   "scripts": {
     "standard": "standard",
     "test": "npm run-script unit",
