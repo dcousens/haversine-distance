@@ -1,5 +1,3 @@
-
-//  const atan2 = Math.atan2
 const asin = Math.asin
 const cos = Math.cos
 const sin = Math.sin
