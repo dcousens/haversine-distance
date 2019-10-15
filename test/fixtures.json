@@ -10,7 +10,7 @@
         "longitude": 151.2094
       }
     ],
-    "expected": 714504.1833376066
+    "expected": 714504
   },
   {
     "arguments": [
@@ -23,7 +23,7 @@
         "lng": 151.2094
       }
     ],
-    "expected": 714504.1833376066
+    "expected": 714504
   },
   {
     "arguments": [
@@ -36,6 +36,34 @@
         "lon": 151.2094
       }
     ],
-    "expected": 714504.1833376066
+    "expected": 714504
+  },
+  {
+    "description": "Melbourne to Geelong",
+    "arguments": [
+      {
+        "lat": -37.81625,
+        "lon": 144.964029
+      },
+      {
+        "lat": -38.149331,
+        "lon": 144.359815
+      }
+    ],
+    "expected": 64694
+  },
+  {
+    "description": "Melbourne to Greenland",
+    "arguments": [
+      {
+        "lat": -37.81625,
+        "lon": 144.96403
+      },
+      {
+        "lat": 73.45,
+        "lon": -42.53
+      }
+    ],
+    "expected": 16049783
   }
 ]
