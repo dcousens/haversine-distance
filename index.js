@@ -1,31 +1,29 @@
-// Reference material(s)
-// - https://en.wikipedia.org/wiki/Haversine_formula
-// - https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
-// - https://stackoverflow.com/questions/1502590/calculate-distance-between-two-points-in-google-maps-v3
 
-var atan2 = Math.atan2
-var cos = Math.cos
-var sin = Math.sin
-var sqrt = Math.sqrt
-var PI = Math.PI
+//  const atan2 = Math.atan2
+const asin = Math.asin
+const cos = Math.cos
+const sin = Math.sin
+const sqrt = Math.sqrt
+const PI = Math.PI
 
-// (mean) radius of Earth (meters)
-var R = 6378137
+// equatorial mean radius of Earth (in meters)
+const R = 6378137
 
 function squared (x) { return x * x }
 function toRad (x) { return x * PI / 180.0 }
-
-module.exports = function haversineDistance (a, b) {
-  var aLat = a.latitude || a.lat
-  var bLat = b.latitude || b.lat
-  var aLng = a.longitude || a.lng || a.lon
-  var bLng = b.longitude || b.lng || b.lon
-
-  var dLat = toRad(bLat - aLat)
-  var dLon = toRad(bLng - aLng)
-
-  var f = squared(sin(dLat / 2.0)) + cos(toRad(aLat)) * cos(toRad(bLat)) * squared(sin(dLon / 2.0))
-  var c = 2 * atan2(sqrt(f), sqrt(1 - f))
-
-  return R * c
+function hav (x) {
+  return squared(sin(x / 2))
 }
+
+// hav(theta) = hav(bLat - aLat) + cos(aLat) * cos(bLat) * hav(bLon - aLon)
+function haversineDistance (a, b) {
+  const aLat = toRad(a.latitude || a.lat)
+  const bLat = toRad(b.latitude || b.lat)
+  const aLng = toRad(a.longitude || a.lng || a.lon)
+  const bLng = toRad(b.longitude || b.lng || b.lon)
+
+  const ht = hav(bLat - aLat) + cos(aLat) * cos(bLat) * hav(bLng - aLng)
+  return 2 * R * asin(sqrt(ht))
+}
+
+module.exports = haversineDistance
