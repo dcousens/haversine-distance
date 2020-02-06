@@ -13,26 +13,16 @@ interface LatLon {
     lon: number;
 }
 
-/**
- * Return the Haversine distance in meters
- * @param a - first location
- * @param b - second location
- */
-declare function haversineDistance(a: LatitudeLongitude, b: LatitudeLongitude): number;
+interface GeoJSONPoint extends Array<number|number>{0:number; 1:number}
+
+type Coordinates = LatitudeLongitude | LatLng | LatLon | GeoJSONPoint
 
 /**
  * Return the Haversine distance in meters
  * @param a - first location
  * @param b - second location
  */
-declare function haversineDistance(a: LatLng, b: LatLng): number;
-
-/**
- * Return the Haversine distance in meters
- * @param a - first location
- * @param b - second location
- */
-declare function haversineDistance(a: LatLon, b: LatLon): number;
+declare function haversineDistance(a: Coordinates, b: Coordinates): number;
 
 declare namespace haversineDistance {
     export function haversineDistance(): number;

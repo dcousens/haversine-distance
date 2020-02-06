@@ -10,26 +10,39 @@ Haversine formula in Javascript.  In meters.  Nothing more.
 
 ## Example
 
-``` javascript
-var haversine = require('haversine-distance')
+### Import
 
-var a = { latitude: 37.8136, longitude: 144.9631 }
-var b = { latitude: 33.8650, longitude: 151.2094 }
-
-// 714504.18 (in meters)
-console.log(haversine(a, b))
+```javascript
+const haversine = require('haversine-distance')
+// or
+import haversine from 'haversine-distance'
 ```
 
-`lat`, `lng` and `lon` works too:
+### Usage
 
-``` javascript
-var haversine = require('haversine-distance')
+```javascript
+const a = { latitude: 37.8136, longitude: 144.9631 }
+const b = { latitude: 33.8650, longitude: 151.2094 }
 
-var a = { lat: 37.8136, lng: 144.9631 }
-var b = { lat: 33.8650, lon: 151.2094 }
+console.log(haversine(a, b)) // 714504.18 (in meters)
+```
 
-// 714504.18 (in meters)
-console.log(haversine(a, b))
+Alternative forms such as `lat`, `lng` and `lon` work too, with mixed support:
+
+```javascript
+const a = { lat: 37.8136, lng: 144.9631 }
+const b = { lat: 33.8650, lon: 151.2094 }
+
+console.log(haversine(a, b)) // 714504.18 (in meters)
+```
+
+### GeoJSON support
+
+```javascript
+const a = [144.9631, 37.8136]
+const b = [151.2094, 33.865]
+
+console.log(haversine(a, b)) // 714504.18 (in meters)
 ```
 
 
