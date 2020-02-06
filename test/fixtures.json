@@ -39,6 +39,13 @@
     "expected": 714504
   },
   {
+    "arguments": [
+      [144.9631, 37.8136],
+      [151.2094, 33.865]
+    ],
+    "expected": 714504
+  },
+  {
     "description": "Melbourne to Geelong",
     "arguments": [
       {
