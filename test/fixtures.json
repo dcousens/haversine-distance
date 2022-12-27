@@ -1,4 +1,18 @@
 [
+	{
+		"description": "London (0° longitude) to Kisumu (0° latitude)",
+		"arguments": [
+			{
+				"latitude": 51.5072,
+				"longitude": 0
+			},
+			{
+				"latitude": 0,
+				"longitude": 34.7680
+			}
+		],
+		"expected": 6595666
+	},
   {
     "arguments": [
       {
