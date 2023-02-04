@@ -1,13 +1,12 @@
 {
   "name": "haversine-distance",
   "version": "1.2.1",
-  "description": "Haversine formula in Javascript. In meters. Nothing more.",
+  "description": "Haversine formula in Javascript, in meters, nothing else",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "standard": "standard",
-    "test": "npm run-script unit",
-    "unit": "tape test/index.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,6 @@
   "license": "MIT",
   "devDependencies": {
     "standard": "*",
-    "tape": "^4.9.1"
+    "tape": "^5.0.0"
   }
 }
