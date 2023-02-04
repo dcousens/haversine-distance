@@ -5,7 +5,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-Haversine formula in Javascript.  In meters.  Nothing more.
+Haversine formula in Javascript, in meters, nothing else
 
 
 ## Example
@@ -46,5 +46,4 @@ console.log(haversine(a, b)) // 714504.18 (in meters)
 ```
 
 
-## License [MIT](LICENSE)
-
+## LICENSE [MIT](LICENSE)
