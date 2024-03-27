@@ -1,6 +1,6 @@
 {
   "name": "haversine-distance",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Haversine formula in Javascript, in meters, nothing else",
   "main": "index.js",
   "types": "index.d.ts",
