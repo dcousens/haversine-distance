@@ -7,30 +7,27 @@ on:
   pull_request:
 
 jobs:
-  unit:
+  test:
+    name: Test
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        # see https://nodejs.org/en/about/releases/
-        node-version: [14.x, 16.x, 18.x]
-
     steps:
-    - uses: actions/checkout@main
-    - uses: actions/setup-node@main
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+      - uses: actions/checkout@main
+      - run: set -o pipefail
+      - run: corepack enable
 
-  standard:
-    runs-on: ubuntu-latest
+      - uses: actions/setup-node@main
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: pnpm
 
-    steps:
-    - uses: actions/checkout@main
-    - uses: actions/setup-node@main
-      with:
-        # don't use lts/* to prevent hitting rate-limit
-        node-version: 18.x
-    - run: npm install
-    - run: npm run standard
+      - run: pnpm install
+
+      - name: npm publish
+        run: |
+          cp LICENSE dist/
+          cd dist/
+          npm config set 'https://registry.npmjs.org/:_authToken' '${NODE_AUTH_TOKEN}'
+          npm publish --provenance --access=public --tag ${{ inputs.npm_tag }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
