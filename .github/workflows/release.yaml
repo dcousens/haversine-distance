@@ -1,0 +1,46 @@
+name: Publish
+
+on:
+  release:
+    types: [created]
+
+  workflow_dispatch:
+    inputs:
+      npm_tag:
+        default: 'latest'
+        description: 'npm tag to publish to'
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  publish_snapshot:
+    name: Publish
+    runs-on: ubuntu-latest
+    environment: Release
+    steps:
+      - uses: actions/checkout@main
+        with:
+          persist-credentials: true # needed for git push
+
+      - run: set -o pipefail
+      - run: corepack enable
+
+      - uses: actions/setup-node@main
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm build
+
+      - name: npm publish
+        run: |
+          cp LICENSE dist/
+          cd dist/
+          npm config set 'https://registry.npmjs.org/:_authToken' '${NODE_AUTH_TOKEN}'
+          npm publish --provenance --access=public --tag ${{ inputs.npm_tag }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
