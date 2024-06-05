@@ -28,6 +28,7 @@
   ],
   "author": "Daniel Cousens",
   "license": "MIT",
+  "packageManager": "pnpm@9.1.4",
   "devDependencies": {
     "standard": "*",
     "tape": "^5.0.0"
