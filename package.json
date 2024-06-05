@@ -1,20 +1,10 @@
+
 {
   "name": "haversine-distance",
   "version": "1.2.2",
+  "license": "MIT",
+  "author": "Daniel Cousens",
   "description": "Haversine formula in Javascript, in meters, nothing else",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "test": "tape test/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dcousens/haversine-distance.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dcousens/haversine-distance/issues"
-  },
-  "homepage": "https://github.com/dcousens/haversine-distance",
   "keywords": [
     "haversine",
     "distance",
@@ -25,9 +15,25 @@
     "math",
     "meters"
   ],
-  "author": "Daniel Cousens",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/haversine-distance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcousens/haversine-distance/issues"
+  },
+  "homepage": "https://github.com/dcousens/haversine-distance",
   "packageManager": "pnpm@9.2.0",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "exports": {
+    ".": {
+      "require": "./export.js",
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
   "devDependencies": {
     "tape": "^5.0.0"
   }

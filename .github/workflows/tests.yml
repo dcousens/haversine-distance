@@ -23,11 +23,4 @@ jobs:
 
       - run: pnpm install
 
-      - name: npm publish
-        run: |
-          cp LICENSE dist/
-          cd dist/
-          npm config set 'https://registry.npmjs.org/:_authToken' '${NODE_AUTH_TOKEN}'
-          npm publish --provenance --access=public --tag ${{ inputs.npm_tag }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: pnpm test
