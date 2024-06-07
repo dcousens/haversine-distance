@@ -1,7 +1,7 @@
 
 {
   "name": "haversine-distance",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "MIT",
   "author": "Daniel Cousens",
   "description": "Haversine formula in Javascript, in meters, nothing else",
