@@ -29,7 +29,7 @@
   },
   "exports": {
     ".": {
-      "require": "./export.js",
+      "require": "./index.js",
       "import": "./index.js",
       "types": "./index.d.ts"
     }
