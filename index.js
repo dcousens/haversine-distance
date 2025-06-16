@@ -1,4 +1,4 @@
-const asin = Math.asin
+const atan2 = Math.atan2
 const cos = Math.cos
 const sin = Math.sin
 const sqrt = Math.sqrt
@@ -21,7 +21,7 @@ function haversineDistance (a, b) {
   const bLng = toRad(Array.isArray(b) ? b[0] : b.longitude ?? b.lng ?? b.lon)
 
   const ht = hav(bLat - aLat) + cos(aLat) * cos(bLat) * hav(bLng - aLng)
-  return 2 * R * asin(sqrt(ht))
+  return 2 * R * atan2(sqrt(ht), sqrt(1 - ht))
 }
 
 module.exports = haversineDistance
